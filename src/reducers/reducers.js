@@ -1,4 +1,4 @@
-import { INPUT, ANSWER, FIBONACCI } from '../actions/actions'
+import { INPUT, ANSWER } from '../actions/actions'
 
 const initialState = {
     userInput: null,

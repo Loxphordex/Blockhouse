@@ -1,4 +1,5 @@
 export default function isPrime(n) {
+    
     if (n < 0) {
         return 'Value must be positive'
     }

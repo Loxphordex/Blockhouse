@@ -37,7 +37,7 @@ function QuestionTemplate(props) {
                 className='q-template-form' 
                 onSubmit={event => handleSubmitInput(event)}>
                     <label htmlFor='user-input'>(n)</label>
-                    <input type='text'
+                    <input type='number'
                     id='user-input'
                     name='user-input'
                     onClick={event => handleUserInput(event)}

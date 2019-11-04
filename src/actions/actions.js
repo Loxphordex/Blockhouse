@@ -1,6 +1,5 @@
 export const INPUT = 'INPUT'
 export const ANSWER = 'ANSWER'
-export const FIBONACCI = 'FIBONACCI'
 
 export function addInput(num) {
     return {

@@ -51,10 +51,16 @@
     color:rgb(90, 97, 158);
 }
 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
 .q-template-form input {
     box-sizing: border-box;
     float: left;
-    text-align: left;
+    text-align: center;
     width: 65%;
     margin-bottom: 5%;
     padding: 5px;

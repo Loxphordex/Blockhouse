@@ -1,4 +1,5 @@
 export default function primeFactors(n) {
+    
     let factors = ''
     let divisor = 2
 
