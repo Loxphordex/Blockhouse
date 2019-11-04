@@ -1,0 +1,23 @@
+* {
+  color: rgb(228, 225, 218);
+  background-color: rgb(51, 49, 44);
+}
+
+body {
+  margin: 0;
+  font-family: 'Titillium Web', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.App {
+  display: block;
+  margin: auto;
+  max-width: 1000px;
+  min-width: 800px;
+}
