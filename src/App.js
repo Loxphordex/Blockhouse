@@ -10,7 +10,6 @@ export const mapStateToProps = (state) => ({
 })
 
 function App(props) {
-  console.log(props)
 
   const {
     input,
@@ -30,12 +29,6 @@ function App(props) {
           answer={answer}
           answers={answers}
         />
-        <QuestionTemplate 
-          input={userInput}
-        />
-        <QuestionTemplate />
-        <QuestionTemplate />
-        <QuestionTemplate />
       </section>
     </div>
   );

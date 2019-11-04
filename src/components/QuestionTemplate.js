@@ -10,8 +10,11 @@ function QuestionTemplate(props) {
         answers
     } = props
 
+    const algType = title.toUpperCase()
+    console.log(algType)
+    console.log(answers[algType])
+
     function handleUserInput(event) {
-        console.log(event.target.value)
         if (input) input(event.target.value)
     }
 
@@ -20,9 +23,9 @@ function QuestionTemplate(props) {
 
         if (algorithm && inputValue) {
             const value = algorithm(inputValue)
-            const algType = title.toUpperCase()
 
-            const questionAnswer = answer(value, algType)
+            answer(value, algType)
+
         }
     }
 
@@ -40,7 +43,11 @@ function QuestionTemplate(props) {
                     onClick={event => handleUserInput(event)}
                     onChange={event => handleUserInput(event)}
                     />
+                    <button className='answer-submit' type='submit'>Enter</button>
                 </form>
+            </div>
+            <div className='answer-container'>
+                { answers && <div className='answer'>{ answers[algType] }</div> }
             </div>
         </div>
     )

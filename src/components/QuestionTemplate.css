@@ -27,9 +27,9 @@
     font-size: 1.8em;
     text-align: left;
     margin-top: 1%;
-    margin-bottom: 0;
+    margin-bottom: 10px;
     padding: 2%;
-    padding-left: 5%;
+    padding-left: 17%;
 }
 
 .q-form-container {
@@ -52,12 +52,64 @@
 }
 
 .q-template-form input {
+    box-sizing: border-box;
     float: left;
-    text-align: center;
-    width: 60%;
-    font-size: 2em;
+    text-align: left;
+    width: 65%;
+    margin-bottom: 5%;
+    padding: 5px;
+    font-size: 1.8em;
     border: none;
     border-radius: 3px;
     background-color: rgb(51, 49, 44);
     color: rgb(209, 157, 230);
+
+    -webkit-box-shadow: 0px 5px 17px -7px rgba(0,0,0,0.8);
+    -moz-box-shadow: 0px 5px 17px -7px rgba(0,0,0,0.8);
+    box-shadow: 0px 5px 17px -7px rgba(0,0,0,0.8);
+}
+
+.answer-submit {
+    background-color: rgb(209, 157, 230);
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    display: block;
+    width: 65%;
+    margin: auto;
+    margin-bottom: 4%;
+    font-weight: 600;
+
+    border-radius: 3px;
+
+    -webkit-box-shadow: 0px 5px 17px -7px rgba(0,0,0,0.8);
+    -moz-box-shadow: 0px 5px 17px -7px rgba(0,0,0,0.8);
+    box-shadow: 0px 5px 17px -7px rgba(0,0,0,0.8);
+}
+
+.answer-submit:hover {
+    background-color: rgb(221, 188, 235);
+}
+
+.answer-submit:active {
+    width: 63%;
+    -webkit-box-shadow: 0px 5px 9px -7px rgba(0,0,0,0.8);
+    -moz-box-shadow: 0px 5px 9px -7px rgba(0,0,0,0.8);
+    box-shadow: 0px 5px 9px -7px rgba(0,0,0,0.8);
+}
+
+.answer-container {
+    background-color: rgb(240, 233, 217);
+    width: 65%;
+    min-height: 70px;
+    margin: 2% auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.answer {
+    margin: auto;
+    text-align: center;
+    background-color: rgb(240, 233, 217);
 }
