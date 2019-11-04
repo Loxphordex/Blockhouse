@@ -2,7 +2,7 @@ import React from 'react';
 import QuestionTemplate from './components/QuestionTemplate'
 import './App.css';
 import './components/QuestionTemplate.css'
-import * as library from './functions/functions'
+import questionData from './data/questionData'
 
 export const mapStateToProps = (state) => ({
   input: state.userInput,
@@ -21,14 +21,16 @@ function App(props) {
   return (
     <div className="App">
       <section className='question-container'>
-        <QuestionTemplate
-          title='Fibonacci'
-          algorithm={library.fibonacci}
-          input={userInput}
-          inputValue={input}
-          answer={answer}
-          answers={answers}
-        />
+        { questionData && questionData.map(data => {
+          return <QuestionTemplate 
+            title={data.title}
+            algorithm={data.algorithm}
+            input={userInput}
+            inputValue={input}
+            answer={answer}
+            answers={answers}
+          />
+        }) }
       </section>
     </div>
   );
