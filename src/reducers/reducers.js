@@ -1,8 +1,8 @@
-import { INPUT } from '../actions/actions'
-import { stat } from 'fs'
+import { INPUT, ANSWER, FIBONACCI } from '../actions/actions'
 
 const initialState = {
     userInput: null,
+    answers: {}
 }
 
 export function AlgorithmReducer(state = initialState, action) {
@@ -11,6 +11,15 @@ export function AlgorithmReducer(state = initialState, action) {
         case INPUT:
             return Object.assign({}, state, {
                 userInput: action.num
+            })
+        case ANSWER:
+            const algorithm = action.payload.algorithm
+
+            return Object.assign({}, state, {
+                answers: {
+                    ...state.answers,
+                    [algorithm]: action.payload.answer
+                }
             })
         default:
             return state

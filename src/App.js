@@ -5,14 +5,18 @@ import './components/QuestionTemplate.css'
 import * as library from './functions/functions'
 
 export const mapStateToProps = (state) => ({
-  input: state.userInput
+  input: state.userInput,
+  answers: state.answers
 })
 
 function App(props) {
   console.log(props)
 
   const {
-    userInput
+    input,
+    userInput,
+    answer,
+    answers
   } = props
 
   return (
@@ -22,6 +26,9 @@ function App(props) {
           title='Fibonacci'
           algorithm={library.fibonacci}
           input={userInput}
+          inputValue={input}
+          answer={answer}
+          answers={answers}
         />
         <QuestionTemplate 
           input={userInput}

@@ -25,4 +25,39 @@
 
 .question-template h2 {
     font-size: 1.8em;
+    text-align: left;
+    margin-top: 1%;
+    margin-bottom: 0;
+    padding: 2%;
+    padding-left: 5%;
+}
+
+.q-form-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.q-template-form {
+    display: inline-block;
+}
+
+.q-template-form label {
+    float: left;
+    font-style: italic;
+    font-size: 1.5em;
+    padding-right: 4%;
+    padding-left: 4%;
+    color:rgb(90, 97, 158);
+}
+
+.q-template-form input {
+    float: left;
+    text-align: center;
+    width: 60%;
+    font-size: 2em;
+    border: none;
+    border-radius: 3px;
+    background-color: rgb(51, 49, 44);
+    color: rgb(209, 157, 230);
 }
