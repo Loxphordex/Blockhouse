@@ -7,12 +7,13 @@ function QuestionTemplate(props) {
         input,
         inputValue,
         answer,
-        answers
+        answers,
+        inputType,
+        openNode,
+        nodeToggle,
     } = props
 
     const algType = title.toUpperCase()
-    console.log(algType)
-    console.log(answers[algType])
 
     function handleUserInput(event) {
         if (input) input(event.target.value)
@@ -25,23 +26,35 @@ function QuestionTemplate(props) {
             const value = algorithm(inputValue)
 
             answer(value, algType)
+            input('')
 
         }
     }
 
+    function openNodeClass() {
+        return (openNode === algType) ? 'open-node' : ''; 
+    }
+
+    function handleNodeToggle() {
+        (openNode === algType)
+            ? nodeToggle('')
+            : nodeToggle(algType)
+    }
+
     return (
-        <div className='question-template'>
-            <h2>{ title }</h2>
+        <div className={`${openNodeClass()} question-template`}>
+            <h2 onClick={() => handleNodeToggle()}>{ title }</h2>
             <div className='q-form-container'>
                 <form
                 className='q-template-form' 
                 onSubmit={event => handleSubmitInput(event)}>
                     <label htmlFor='user-input'>(n)</label>
-                    <input type='number'
+                    <input type={inputType}
                     id='user-input'
                     name='user-input'
                     onClick={event => handleUserInput(event)}
                     onChange={event => handleUserInput(event)}
+                    autocomplete='off'
                     />
                     <button className='answer-submit' type='submit'>Enter</button>
                 </form>

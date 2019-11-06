@@ -1,8 +1,9 @@
-import { INPUT, ANSWER } from '../actions/actions'
+import { INPUT, ANSWER, TOGGLE_EXPAND } from '../actions/actions'
 
 const initialState = {
     userInput: null,
-    answers: {}
+    answers: {},
+    openNode: '',
 }
 
 export function AlgorithmReducer(state = initialState, action) {
@@ -20,6 +21,10 @@ export function AlgorithmReducer(state = initialState, action) {
                     ...state.answers,
                     [algorithm]: action.payload.answer
                 }
+            })
+        case TOGGLE_EXPAND:
+            return Object.assign({}, state, {
+                openNode: action.payload.title
             })
         default:
             return state

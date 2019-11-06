@@ -6,7 +6,8 @@ import questionData from './data/questionData'
 
 export const mapStateToProps = (state) => ({
   input: state.userInput,
-  answers: state.answers
+  answers: state.answers,
+  openNode: state.openNode,
 })
 
 function App(props) {
@@ -15,7 +16,9 @@ function App(props) {
     input,
     userInput,
     answer,
-    answers
+    answers,
+    openNode,
+    nodeToggle,
   } = props
 
   return (
@@ -29,6 +32,9 @@ function App(props) {
             inputValue={input}
             answer={answer}
             answers={answers}
+            inputType={data.inputType}
+            openNode={openNode}
+            nodeToggle={nodeToggle}
           />
         }) }
       </section>

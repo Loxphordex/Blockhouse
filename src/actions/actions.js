@@ -1,5 +1,6 @@
 export const INPUT = 'INPUT'
 export const ANSWER = 'ANSWER'
+export const TOGGLE_EXPAND = 'TOGGLE_EXPAND'
 
 export function addInput(num) {
     return {
@@ -14,6 +15,15 @@ export function addAnswer(num, algorithm) {
         payload: {
             answer: num,
             algorithm
+        }
+    }
+}
+
+export function toggleExpand(title) {
+    return {
+        type: TOGGLE_EXPAND,
+        payload: {
+            title
         }
     }
 }

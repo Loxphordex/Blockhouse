@@ -3,18 +3,27 @@ import * as library from '../functions/functions'
 export default [
     {
         title: 'Fibonacci',
-        algorithm: library.fibonacci
+        algorithm: library.fibonacci,
+        inputType: 'number',
     },
     {
         title: 'FibRecursive',
-        algorithm: library.fibonacciRecursve
+        algorithm: library.fibonacciRecursve,
+        inputType: 'number',
     },
     {
         title: 'IsPrime',
-        algorithm: library.isPrime
+        algorithm: library.isPrime,
+        inputType: 'number',
     },
     {
         title: 'PrimeFactors',
-        algorithm: library.primeFactors
-    }
+        algorithm: library.primeFactors,
+        inputType: 'number',
+    },
+    {
+        title: 'Permutations',
+        algorithm: library.permutations,
+        inputType: 'text',
+    },
 ]
