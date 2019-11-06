@@ -11,6 +11,7 @@ function QuestionTemplate(props) {
         inputType,
         openNode,
         nodeToggle,
+        color,
     } = props
 
     const algType = title.toUpperCase()
@@ -32,7 +33,11 @@ function QuestionTemplate(props) {
     }
 
     function openNodeClass() {
-        return (openNode === algType) ? 'open-node' : ''; 
+        console.log(openNode)
+        if (openNode.length) {
+          return (openNode === algType) ? 'open-node' : 'inv-node'; 
+        }
+        return ''
     }
 
     function handleNodeToggle() {
@@ -42,16 +47,16 @@ function QuestionTemplate(props) {
     }
 
     return (
-        <div className={`${openNodeClass()} question-template`}>
+        <div className={`${openNodeClass()} question-template ${color}`}>
             <h2 onClick={() => handleNodeToggle()}>{ title }</h2>
             <div className='q-form-container'>
                 <form
                 className='q-template-form' 
                 onSubmit={event => handleSubmitInput(event)}>
-                    <label htmlFor='user-input'>(n)</label>
+                    <label htmlFor={`user-input-${title}`}>(n)</label>
                     <input type={inputType}
-                    id='user-input'
-                    name='user-input'
+                    id={`user-input-${title}`}
+                    name={`user-input-${title}`}
                     onClick={event => handleUserInput(event)}
                     onChange={event => handleUserInput(event)}
                     autocomplete='off'
@@ -60,7 +65,7 @@ function QuestionTemplate(props) {
                 </form>
             </div>
             <div className='answer-container'>
-                { answers && <div className='answer'>{ answers[algType] }</div> }
+                { answers && <p className='answer'>{ answers[algType] }</p> }
             </div>
         </div>
     )

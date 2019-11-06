@@ -11,7 +11,8 @@
     min-height: 250px;
     margin: 3%;
     border-radius: 3px;
-    transition: width 1s;
+    transition: all 0.5s;
+    transition-timing-function: ease-in-out;
 
     -webkit-box-shadow: -1px 13px 32px -8px rgba(0,0,0,0.7);
     -moz-box-shadow: -1px 13px 32px -8px rgba(0,0,0,0.7);
@@ -21,7 +22,26 @@
 .question-template,
 .question-template * {
     color: rgb(51, 49, 44);
+}
+
+.tan, .tan * {
     background-color: rgb(243, 225, 179);
+}
+
+.light-red, .light-red * {
+    background-color: rgb(231, 165, 160);
+}
+
+.light-orange, .light-orange * {
+    background-color: rgb(235, 178, 126);
+}
+
+.blu, .blu * {
+    background-color: rgb(179, 217, 243);
+}
+
+.off-white, .off-white * {
+    background-color: rgb(244, 247, 238);
 }
 
 .question-template h2 {
@@ -121,9 +141,67 @@ input[type=number]::-webkit-outer-spin-button {
     margin: auto;
     text-align: center;
     background-color: rgb(240, 233, 217);
+    overflow: hidden;
 }
 
 .question-template::open-node {
     min-width: 93%;
     max-width: 93%;
+}
+
+
+
+.open-node {
+    min-width: 93%;
+    min-height: 320px;
+
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    grid-template-columns: 1fr 2fr;
+}
+
+.open-node h2 {
+    text-align: center;
+    padding-left: 2%;
+}
+
+.open-node .q-form-container {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.open-node .q-template-form {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.open-node .q-template-form label {
+    float: none;
+}
+
+.open-node .q-template-form input {
+    float: none;
+    display: block;
+    margin: auto;
+    margin-bottom: 2%;
+}
+
+.open-node .answer-submit {
+    margin-bottom: 2%;
+}
+
+.open-node .answer {
+
+}
+
+.open-node .answer-container {
+    margin: 4% auto;
+    width: 80%;
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.inv-node {
+    display: none;
 }

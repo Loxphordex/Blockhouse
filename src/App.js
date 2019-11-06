@@ -35,6 +35,7 @@ function App(props) {
             inputType={data.inputType}
             openNode={openNode}
             nodeToggle={nodeToggle}
+            color={data.color}
           />
         }) }
       </section>
